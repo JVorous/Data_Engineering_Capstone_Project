@@ -1,0 +1,34 @@
+**Data Dictionary**
+
+crime_categories_table
+
+    crime_index -- integer value for ID of record in table. Auto-generated during ETL
+    crime_cat -- string value for category of report crime, obtained from NYC Complaint Data
+    crime_desc -- string value for category of report crime, obtained from NYC Complaint Data
+
+boroughs_table:
+
+    borough_index -- integer value for ID of record in table. Auto-generated during ETL
+    borough -- string value for name of New York City boroughs, obtained from NYC Census data
+    pop_count -- integer value for population of each NYC burough, obtained from NYC Census data
+
+temperature_table:
+    temp_index -- integer value for ID of record in table. Auto-generated during ETL
+    temp_date -- date value for day the temperature reading was recorded from US City temp data
+    kelvin -- integer value for temperature in Kelvin. Averaged over each hourly recording from US City temp data
+    celsius -- integer value for temperature in celsius. Calculated from Kelvin value
+    fahrenheit -- integer value for temperature in fahrenheit. Calculated from Kelvin value
+
+date_table:
+    date_index -- integer value for ID of record in table. Auto-generated during ETL
+    date  -- date value for date of reported crime, obtained from NYC Complaint Data
+    dayofweek -- integer value for day of week, calculated from date
+    month -- integer value for month, calculated from date
+    year -- integer value for year, calculated from date
+
+crime_stats_df:
+    id - integer value,  obtained from NYC Complaint Data
+    date_index - integer value referencing date dimension table
+    borough_index - integer value referencing borough dimension table
+    temp_index - integer value referencing temp dimension table
+    crime_index - integer value referencing crime dimension table

@@ -1,0 +1,29 @@
+Dimension Tables:
+
+crime_df:
+	crime_id
+	category
+	type
+
+borough_df:
+	borough code
+	name
+	population
+	
+monthly_temp_df:
+	date
+	average temp
+	
+time_df:
+	date
+	dayofweek
+	month
+	year
+
+Fact:
+crime_stats_df:
+	id
+	burough code
+	date
+	crime id
+	
